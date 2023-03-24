@@ -1,0 +1,29 @@
+package:
+  id: kwindowsystem
+  name: kwindowsystem
+  version: 5.54.0
+  kind: lib
+  discription: |
+    kwindowsystem
+
+base:
+  id: org.deepin.base
+  version: 20.5.0
+
+#pkg-kde-tools gettext graphviz 
+depends:
+- id: qtbase
+  version: 5.11.3.15
+- id: qttools
+  version: 5.11.3
+- id: qtx11extras
+  version: 5.11.3
+
+source:
+  kind: git
+  url: https://github.com/deepin-community/kwindowsystem.git
+  version: master
+  commit: 4f458fe81fae1bb8c0ab069ba6ebe2b5374338c7
+  patch: []
+build:
+  kind: cmake
